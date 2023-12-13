@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop up</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+/*.popup{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+.popup-wrapper{
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color:#f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    z-index: 100000000000;
+}
+.msg{
+    padding: 15px;
+    text-align: center;
+}
+.cross{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.btn{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.btn .ok-btn .option-ok,.close-btn .option-close{
+    height: 2.5rem;
+    width: 5rem;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.ok-btn .option-ok:hover{
+    background-color: green;
+    cursor: pointer;
+    border: none;
+}
+.close-btn .option-close:hover{
+    background-color: red;
+    cursor: pointer;
+    border: none;
+}
+.cross svg{
+    margin: 5px;
+    cursor: pointer;
+}
+.hide{
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <div class="popup">
+        <div id="main" class="popup-wrapper hide">
+            <div class="cross">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" width="24" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+            </div>
+            <h1 class="msg">This is a popup!</h1>
+            <div class="btn">
+                <div class="ok-btn">
+                    <button class="option-ok">Ok</button>
+                </div>
+                <div class="close-btn">
+                    <button class="option-close">Close</button>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
