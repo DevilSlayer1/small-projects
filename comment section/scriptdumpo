@@ -1,0 +1,28 @@
+let i=0;
+    try{
+        let comment=document.getElementById('input-comment');
+        let commentdata=comment.value;
+        let content=document.getElementById('content');
+        if(commentdata=='')
+        {
+            alert("Please add a comment!");
+            comment.focus();
+        }
+        let details=document.querySelector('.details');
+        
+        details.insertAdjacentHTML('beforeend', `<div class="username">
+    <span id="user">user${i}</span>
+    <span id="time">1 month</span>
+</div>
+<div class="body">
+    <span id="content">${commentdata}</span>
+</div>`);
+        i=i+1
+        console.log(commentdata);
+        comment.value="";
+        comment.focus();
+    }
+    catch(error)
+    {
+        console.error(error);
+    }

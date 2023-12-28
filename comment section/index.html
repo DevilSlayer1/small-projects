@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment section</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="comment">
+        <div class="comment-wrapper">
+            <div class="noofcomments">
+                <h2 id="comment-count"><span id=count>Comments</span></h2>
+                <h2 id="sort">Sort By:</h2>
+            </div>
+            <div class="addacomment">
+                
+                    <input type="text" name="" id="input-comment" placeholder="Add a comment...">
+                <div class="extra-btns">
+                    <div class="cancel">
+                        <button onclick="cancelcomment()" class="cancel-btn">Cancel</button>
+                    </div>
+                    <div class="post">
+                        <button onclick="postComment()" class="post-btn">Post</button>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="comment-section">
+                <div class="comment">
+                    <div class="details">
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="readcomment.js"></script>
+    <script src="postcomment.js"></script>
+</body>
+</html>
