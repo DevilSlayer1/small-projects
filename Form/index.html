@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="signup-form">
-        <form name="submit-to-google-sheet">
+        <form id="form" action="/submit-form" method="post">
             <div class="form-wrapper">
                 <div class="input">
                     <label for="Username">Username:</label>
@@ -38,16 +38,5 @@
         </form>
     </div>
     <script src="script.js"></script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwVOfA0l7peRjik_bkQDpCd2QhjvjSWVs7p7AvefogYbP713mx8OQb-3CcuRckpXLXxLw/exec';
-        const form2 = document.forms['submit-to-google-sheet']
-      
-        form2.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form2)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
-        })
-    </script>
 </body>
 </html>

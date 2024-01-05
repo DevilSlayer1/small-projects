@@ -39,7 +39,7 @@ function checkUsername(username){
         for(let i = 0;i<username.length;i++)
         {
             ch=username.charAt(i);
-            console.log(ch);
+            //console.log(ch);
             if(ch==" " || ch==' ' || ch==`'` || ch==`"` || ch=='`' || ch=='/' || ch=='&' || ch=='%' || ch=='+' || ch=='=' || ch=='?' || ch=='#' || ch=='$' || ch==';' || ch==':')
             {
                 successusername.innerHTML="";
@@ -71,8 +71,8 @@ function isValidEmail(email) {
             c2=c2+1;
         }
     }
-    console.log(c1,c2);
-    console.log(index1,index2)
+    //console.log(c1,c2);
+    //console.log(index1,index2)
     if(c1!=1 || c2!=1 || index2<index1)
     {
         return false;
@@ -124,7 +124,7 @@ function checkEmail(Email)
 }
 function checkPassword(password)
 {
-    console.log(password.length)
+    //console.log(password.length)
     if(password=='')
     {
         successpassword.innerHTML="";
@@ -168,7 +168,7 @@ function checkPassword(password)
                 special++;
             }
         }
-        console.log(uppercase,lowercase,number,special);
+        //console.log(uppercase,lowercase,number,special);
         if(uppercase<1 || lowercase<1 || special<1 || number<1)
         {
             successpassword.innerHTML="";
@@ -188,9 +188,9 @@ const inputusername=document.getElementById('username-input');
 
 inputusername.addEventListener('input',()=>{
     let username=inputusername.value;
-    console.log(username);
+    //console.log(username);
     let usernameValidity=checkUsername(username);
-    console.log(usernameValidity);
+    //console.log(usernameValidity);
     if(usernameValidity==true)
         {
             username.value="";
@@ -206,7 +206,7 @@ const inputemail=document.getElementById('email-input');
 inputemail.addEventListener('input',()=>{
     let email=inputemail.value;
     let emailValidity=checkEmail(email);
-    console.log(emailValidity);
+    //console.log(emailValidity);
     if(emailValidity==true)
         {
             inputemail.innerHTML="";
@@ -227,7 +227,7 @@ inputpassword.addEventListener('input',()=>{
     let passwordValidity=checkPassword(password);
     
     
-    console.log(passwordValidity);
+    //console.log(passwordValidity);
     
     
     if(passwordValidity==true)
@@ -236,13 +236,30 @@ inputpassword.addEventListener('input',()=>{
         errorpassword.innerHTML="";
         successpassword.innerHTML="Password entered successfully!";
     }
-    if(emailValidity==true && usernameValidity==true && passwordValidity==true)
-    {
-        form.reset();
-    }
 })
 
 submit.addEventListener('click',(event)=>{
     event.preventDefault();
+
+    let form = document.getElementById('form');
+    let username=inputusername.value;
+    //console.log(username);
+    let usernameValidity=checkUsername(username);
+let email=inputemail.value;
+    let emailValidity=checkEmail(email);
+let password=inputpassword.value;
     
-});
+    
+    let passwordValidity=checkPassword(password);
+    if(usernameValidity==true && emailValidity==true &&passwordValidity==true){
+        form.reset();
+        //reset messages
+        errorpassword.innerHTML="";
+        successpassword.innerHTML="";
+        erroremail.innerHTML="";
+        successemail.innerHTML="";
+        errorusername.innerHTML="";
+        successusername.innerHTML="";
+    }
+    
+}); 
