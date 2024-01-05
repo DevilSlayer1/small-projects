@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100vh;
+    width: 100vw;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.signup-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+label{
+    font-weight: bold;
+}
+input{
+    padding: 0px 7px;
+    height: 50px;
+    width: 100%;
+    border-radius: 7px;
+    border-bottom: 2px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.form-wrapper{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 60%;
+    gap: 30px;
+}
+.submit-btn .btn{
+    height: 40px;
+    width: 175px;
+    color: white;
+    border: 2px solid #228B22;
+    background-color: #228B22;
+    transition: background-color 0.3s ease-in-out,color 0.3s ease-in-out,border 0.3s ease-in-out,font-weight 0.3s ease-in-out;
+}
+.submit-btn .btn:hover{
+    height: 40px;
+    width: 175px;
+    color: #228b22;
+    border-radius: white;
+    background-color: white;
+    font-weight: 600;
+}
