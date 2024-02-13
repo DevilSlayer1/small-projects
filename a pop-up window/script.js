@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded',()=>{
     const close=document.querySelector(".close-btn");
     const main=document.getElementById("main");
     crossmark.addEventListener('click',()=>{
-        main.classList.toggle("hide");
+        main.classList.add("hide");
     });
     ok.addEventListener('click',()=>{
-        //Add function
+        main.classList.add("hide");
     });
     close.addEventListener('click',()=>{
-        main.classList.toggle("hide");
+        main.classList.add("hide");
     });
 });
