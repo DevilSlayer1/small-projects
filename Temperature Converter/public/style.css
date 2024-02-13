@@ -41,6 +41,7 @@ p{
     justify-content: center;
     flex-direction: column;
     margin: auto 0 auto;
+    gap: 10px;
 }
 .enter-temp{
     display: flex;
@@ -85,7 +86,25 @@ p{
     max-width: 300px;
     border-radius: 5px;
 }
-
+.convert-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.convert-btn #convertBtn{
+    height: 35px;
+    width: 70px;
+    border-radius: 4px;
+    border: #0b8989 solid 2px;
+    background-color: #0b8989;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+.convert-btn #convertBtn:hover{
+    border-radius: 4px;
+    background-color: white;
+    color: #0b8989;
+}
 /*Popup*/
 .popup{
     border-radius: 5px;

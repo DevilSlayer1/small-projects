@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', ()=>{
+    let convertBtn=document.getElementById('convertBtn');
     let temperature = document.getElementById('temperature');
-    temperature.addEventListener('input',()=>{
+    convertBtn.addEventListener('click',()=>{
         
         let tempValue = parseFloat(temperature.value);
         let output = document.getElementById('converted-temp');
          // Parse as float
          if(tempValue==='' || isNaN(tempValue)==true)
          {
+            alert("Please enter valid value!")
              output.value="";
              return false;
          }
