@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Calculator app</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="body">
+      <div class="body-wrapper m-auto flex h-full w-full flex-col items-center justify-center">
+        <div class="calculator min-w-96 items-center justify-center rounded-3xl bg-gray-800">
+          <div class="output-wrapper flex justify-center">
+            <div class="output-screen m-3 flex min-h-52 w-full items-center justify-end rounded-xl border border-gray-700 bg-gray-800 text-7xl">23</div>
+          </div>
+          <div class="button">
+            <div class="row1 my-12 flex justify-evenly">
+              <div class="ac text-orange-600"><button>AC</button></div>
+              <div class="del text-orange-600"><button>DEL</button></div>
+              <div class="cent text-orange-600"><button>%</button></div>
+              <div class="plus text-orange-600"><button>+</button></div>
+            </div>
+            <div class="row2 my-12 flex justify-evenly">
+              <div class="seven"><button>7</button></div>
+              <div class="eight"><button>8</button></div>
+              <div class="nine"><button>9</button></div>
+              <div class="minus text-orange-600"><button>-</button></div>
+            </div>
+            <div class="row3 my-12 flex justify-evenly">
+              <div class="four"><button>4</button></div>
+              <div class="five"><button>5</button></div>
+              <div class="six"><button>6</button></div>
+              <div class="x text-orange-600"><button>x</button></div>
+            </div>
+            <div class="row4 my-12 flex justify-evenly">
+              <div class="three"><button>3</button></div>
+              <div class="two"><button>2</button></div>
+              <div class="one"><button>1</button></div>
+              <div class="divide text-orange-600"><button>/</button></div>
+            </div>
+            <div class="row5 my-4 flex justify-evenly">
+              <div class="zero"><button>0</button></div>
+              <div class="dot"><button>.</button></div>
+              <div class="equal"><button class="border-none bg-orange-600 font-bold text-white outline-none">=</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
