@@ -158,6 +158,8 @@ p{
 .cross svg{
     margin: 5px;
     cursor: pointer;
+    position: relative;
+    left: 12px;
 }
 .hide-modal{
     display: none;
