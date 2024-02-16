@@ -132,6 +132,8 @@ document.addEventListener('DOMContentLoaded',()=>{
             outputScreen.classList.remove('text-gray-300');
             outputScreen.classList.add('text-black');
             toggleText.classList.add('text-white')
+            outputScreen.classList.remove('border-gray-700');
+            outputScreen.classList.add('border-gray-300');
         }
         else{
            
@@ -147,6 +149,8 @@ document.addEventListener('DOMContentLoaded',()=>{
             outputScreen.classList.add('text-gray-300');
             outputScreen.classList.remove('text-black');
             toggleText.classList.remove('text-white')
+            outputScreen.classList.add('border-gray-700');
+            outputScreen.classList.remove('border-gray-300');
         }
         
     }
