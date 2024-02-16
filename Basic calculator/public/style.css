@@ -1,0 +1,40 @@
+*{
+  user-select: none;
+}
+html,
+body,
+.body,
+.body-wrapper {
+  height: 99vh;
+  width: 99vw;
+  overflow: hidden; 
+}
+
+button {
+  height: 40px;
+  width: 80px;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.3);
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+  border: none;
+}
+
+/*.digit {
+  color: white;
+  transition: all 0.3s ease-in-out;
+}*/
+.err{
+  margin-top: 15px;
+}
+
+/*.white-output-screen{
+  background-color: white;
+  color: black;
+}
+.white-buttons{
+  background-color: white;
+  color: black;
+}*/

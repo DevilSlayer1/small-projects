@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Calculator app</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="body transition-all duration-500">
+      <div class="dark-white flex justify-center w-full p-2 items-center">
+        <label class="inline-flex items-center cursor-pointer">
+          <input id="toggle-btn" type="checkbox" value="" class="sr-only peer">
+          <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+          <span id="toggle-text" class="ms-3 text-md font-medium text-gray-900 dark:text-gray-300 transition-all duration-500">Toggle Mode</span>
+        </label>
+      </div>
+      <div class="body-wrapper m-auto flex h-full w-full flex-col items-center justify-center">
+        <div class="calculator transition-all duration-500 min-w-96 items-center justify-center rounded-3xl bg-gray-800">
+          <div class="output-wrapper flex justify-center">
+            <div class="output-screen transition-all duration-500 m-3 flex min-h-52 w-full items-center justify-end rounded-xl border border-gray-700 bg-gray-800 text-3xl text-gray-300"><span class="px-2 " id="output"></span>
+              <div class="err"><span class="text-orange-600 items-end p-1" id="error"></span></div>
+            </div>
+            
+          </div>
+          <div class="button">
+            <div class="row1 my-12 flex justify-evenly">
+              <div class="ac text-orange-600"><button>AC</button></div>
+              <div class="del text-orange-600"><button>DEL</button></div>
+              <div class="cent text-orange-600"><button>%</button></div>
+              <div class="plus text-orange-600"><button>+</button></div>
+            </div>
+            <div class="row2 transition-all duration-500 my-12 flex justify-evenly">
+              <div class="digit seven"><button>7</button></div>
+              <div class="digit eight"><button>8</button></div>
+              <div class="digit nine"><button>9</button></div>
+              <div class="minus text-orange-600"><button>-</button></div>
+            </div>
+            <div class="row3 transition-all duration-500 my-12 flex justify-evenly">
+              <div class="digit four"><button>4</button></div>
+              <div class="digit five"><button>5</button></div>
+              <div class="digit six"><button>6</button></div>
+              <div class="multiply text-orange-600"><button>x</button></div>
+            </div>
+            <div class="row4 transition-all duration-500 my-12 flex justify-evenly">
+              <div class="digit three"><button>3</button></div>
+              <div class="digit two"><button>2</button></div>
+              <div class="digit one"><button>1</button></div>
+              <div class="divide text-orange-600"><button>/</button></div>
+            </div>
+            <div class="row5 transition-all duration-500 my-4 flex justify-evenly">
+              <div class="digit zero"><button>0</button></div>
+              <div class="digit dot"><button>.</button></div>
+              <div class="equal text-2xl"><button class="border-none bg-orange-600 font-bold text-white outline-none">=</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
