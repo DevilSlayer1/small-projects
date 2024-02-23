@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html,body,.body{
+            height: 100vh;
+
+        }
+        body{
+            background-image: url(lionel-messi-barcelona-football-player-4k_1540063491.jpg.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position:center ;
+        }
+        .hide{
+            display: none;
+        }
+        @keyframes anim {
+            from{
+                transform: translateX(-200px);
+            }
+            to{
+                transform: translateX(0px);
+            }
+        }
+        @keyframes anim2 {
+            from{
+                transform: translateX(200px);
+            }
+            to{
+                transform: translateX(0px);
+            }
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <div class="body">
+        <div class="body-wrapper">
+            <div class="navigation-bar">
+                <nav class="flex justify-center h-48 items-center text-gray-200">
+                    <ul class="flex gap-48 text-2xl transition-all duratiob-500  ">
+                        <li class="hover:cursor-pointer" id="quote">Quotes</li>
+                        <li class="hover:cursor-pointer" id="timeline">Timeline</li>
+                        <li class="hover:cursor-pointer" id="motivation">Motivation</li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="root" class="content hide">
+                <div class="quotes flex flex-col items-center justify-center text-gray-200 ">
+                    <p class="m-9 text-3xl">Here are his 5 best ones</p>
+                    <ol class="flex w-9/12 flex-col gap-10 px-2 text-3xl">
+                      <li>1. You have to fight to reach your dream. You have to sacrifice and work hard for it."</li>
+                      <li>2. "I start early, and I stay late, day after day, year after year. It took me 17 years and 114 days to become an overnight success."</li>
+                      <li>3. "I prefer to win titles with the team ahead of individual awards or scoring more goals than anyone else. I'm more worried about being a good person than being the best football player in the world. When all this is over, what are you left with?"</li>
+                      <li>4. "There are more important things in life than winning or losing a game."</li>
+                      <li>5. "The moment you give up, is the moment you let someone else win."</li>
+                    </ol>
+                </div>
+            </div>
+            <div id="root2" class="hide">
+                <div class="timeline flex flex-col items-center justify-center text-gray-200 ">
+                    <p class="m-9 text-3xl w-9/12">Lionel Messi, the legendary Argentine footballer, has left an indelible mark on the sport. With eight Ballon d’Or awards, he stands as the most decorated player in history. His La Liga records include an astounding 474 goals and 192 assists. Messi’s dominance extends to the European Golden Shoes, which he has won five and six times. Notably, he led Argentina to victory in the Copa América 2021 and played a pivotal role in their FIFA World Cup 2022 win. His legacy continues to inspire fans worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
