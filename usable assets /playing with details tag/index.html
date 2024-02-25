@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="signup flex-center mstop">
+    <div class="input-email">
+        <input class="email-input" type="email" placeholder="">
+        <span class="placeholder">Email address</span>
+    </div>
+  </div>
+
+<script>
+const emailInput = document.querySelector('.email-input');
+const placeholder = document.querySelector('.placeholder');
+
+emailInput.addEventListener('focus', () => {
+  placeholder.style.top = '13px';
+  placeholder.style.fontSize = '12px';
+  placeholder.placeholder="";
+});
+
+emailInput.addEventListener('blur', () => {
+  if (!emailInput.value) {
+    placeholder.style.top = '50%';
+    placeholder.style.fontSize = '';
+  }
+});
+
+</script>
+</body>
+</html>
